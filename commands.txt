@@ -1,0 +1,6 @@
+#check out our services
+oc get svc
+
+#Grab IP
+$SERVICEIP=(oc get service php-apache -o jsonpath='{.status.loadBalancer.ingress[0].ip}')
+
